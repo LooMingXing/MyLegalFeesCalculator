@@ -45,14 +45,15 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonCaculate.setOnClickListener {
-            val selling_price = binding.editTextSellingPrice.text.toString()
-            val downpayment = binding.editTextDownPayment.text.toString()
+            val selling_price = binding.editTextSellingPrice.text.toString().toFloat()
+            val downpayment = binding.editTextDownPayment.text.toString().toFloat()
             val legalFees = ""
             val stamp_duty = ""
             val first_time = binding.checkBoxFirstTime.isChecked
+            val loan = selling_price - downpayment
 
             if(first_time){
-
+                if (loan == (selling_price * 0.9))
             }
         }
 
