@@ -52,6 +52,7 @@ class HomeFragment : Fragment() {
             val first_time = binding.checkBoxFirstTime.isChecked
             val loan = selling_price - downpayment
 
+//            why got error!? == cannot use by float or double..
             if(first_time){
                 if (loan == (selling_price * 0.9))
             }
